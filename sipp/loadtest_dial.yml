@@ -1,0 +1,17 @@
+---
+#
+# YAML Scenario for Adhearsion Load Testing
+#
+source: 192.168.1.1
+destination: 192.168.1.1
+sip_user: usera # extension to dial
+max_concurrent: 1
+calls_per_second: 1
+number_of_calls: 1
+steps:
+  - invite
+  - wait_for_answer
+  - ack_answer
+  - sleep 2 # Wait for call setup
+  - send_digits '4' # Yes/No Question response
+  - wait_for_hangup
