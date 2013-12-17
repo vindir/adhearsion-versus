@@ -49,12 +49,6 @@ Content-Length: 0
       <exec play_pcap_audio="loadtest_menu.pcap"/>
     </action>
   </nop>
-  <pause milliseconds="2000"/>
-  <pause milliseconds="500"/>
-  <pause milliseconds="2000"/>
-  <pause milliseconds="500"/>
-  <pause milliseconds="2000"/>
-  <pause milliseconds="500"/>
   <recv request="BYE"/>
   <send>
 <![CDATA[
