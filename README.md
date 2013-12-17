@@ -7,8 +7,11 @@ Begin by setting up the telephony engines that will be tested. The included .env
 Start up Adhearsion for the telephony engine that is to be tested.
 
 ```
-#Start up with FreeSwitch
-foreman start --env freeswitch.env
+#Start up with FreeSwitch Rayo
+foreman start --env freeswitch-rayo.env
+
+#Start up with FreeSwitch EventSocket
+foreman start --env freeswitch-eventsocket.env
 
 #Start up with Asterisk
 foreman start --env asterisk.env
