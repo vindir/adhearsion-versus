@@ -12,6 +12,6 @@ steps:
   - invite
   - wait_for_answer
   - ack_answer
-  - sleep 2 # Wait for call setup
-  - send_digits '4' # Yes/No Question response
+  - sleep 2 # Wait for main menu
+  - send_digits '4' # Trigger outbound dial
   - wait_for_hangup
