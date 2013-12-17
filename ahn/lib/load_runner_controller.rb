@@ -27,7 +27,7 @@ class LoadRunner < Adhearsion::CallController
 
   def hop_menu
     menu hop_audio, timeout: 5.seconds, tries: 3 do
-      match(1) { main_menu }
+      match(1) { logger.info "Handed off to hop_menu sucessfully" }
       timeout { menu_error :input_timeout }
       invalid { menu_error :invalid_input }
       failure { menu_error :too_many_attempts }
