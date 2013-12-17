@@ -16,7 +16,7 @@ foreman start --env asterisk.env
 
 # Set up SIPP
 
-Once the desired Asterisk or FreeSwitch VM is up and running, log in and set up SIPP.
+In order to run the tests located in sipp/ sipp should be built from source or the TDB loadtesting VM should be started up.  The basic steps for installing SIPP are as below:
 
 ```
 wget <SIPPDOWNLoADLINK>
@@ -27,8 +27,9 @@ sudo cp sipp /usr/local/bin/
 ```
 
 ## Run through the desired SIPP profiles
-SIPP profiles for various tests are included in sipp/ to begin testing quickly. Sample run commands for the included tests can be found in sipp/runlist.txt
+SIPP profiles for various tests are included in sipp/ to begin testing quickly. Sample run commands for the included tests can be found in MANUAL_TEST_COMMANDS
 
 ## Side Notes ##
 ```canreinvite = no``` should be set in asterisk to allow for the listener scenario to work properly
 
+If not running the sipp tests from the VM under test, make certain to update the two .csv files and the sipp comands in MANUAL_TEST_COMMANDS appropriately for your environment
