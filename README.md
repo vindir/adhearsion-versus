@@ -14,7 +14,7 @@ foreman start --env freeswitch-rayo.env
 foreman start --env freeswitch-eventsocket.env
 
 #Start up with Asterisk
-foreman start --env asterisk.env
+foreman start --env asterisk-ami.env
 ```
 
 # Set up SIPP
