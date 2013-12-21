@@ -46,7 +46,7 @@ Content-Length: 0
 </send>
   <nop>
     <action>
-      <exec play_pcap_audio="loadtest_originate.pcap"/>
+      <exec play_pcap_audio="/vagrant/adhearsion-versus/sipp/loadtest_originate.pcap"/>
     </action>
   </nop>
   <recv request="BYE"/>

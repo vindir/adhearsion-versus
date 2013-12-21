@@ -4,7 +4,7 @@
 #
 source: 192.168.1.1
 destination: 192.168.1.1
-sip_user: usera # extension to dial
+sip_user: originate
 max_concurrent: 1
 calls_per_second: 1
 number_of_calls: 1
@@ -12,6 +12,4 @@ steps:
   - invite
   - wait_for_answer
   - ack_answer
-  - sleep 2 # Wait for main menu
-  - send_digits '5' # Trigger outbound originate
   - wait_for_hangup

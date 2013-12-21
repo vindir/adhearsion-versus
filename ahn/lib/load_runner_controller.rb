@@ -4,25 +4,33 @@ class LoadRunner < Adhearsion::CallController
 
   def run
     answer
-    main_menu
-    logger.info "Test call #{call.id} has completed normally"
-  end
-
-  def main_menu
-    menu standard_greeting, timeout: 5.seconds, tries: 3 do
-      match 1, HandOffController
-      match(2) { pass HandOffController }
-      match(3) { play_audio_test }
-      match(4) { dial_outbound }
-      match(5) { originate_call }
-      match(6) { hop_menu }
-      match(7) { } #exit menu
-
-      timeout { menu_error :input_timeout }
-      invalid { menu_error :invalid_input }
-      failure { menu_error :too_many_attempts }
+    logger.info "Call to #{call.to} received"
+    case call.to
+    when /wait/
+      logger.info "Waiting..."
+      sleep 60
+    when /invoke/
+      logger.info "Invoking..."
+      invoke HandOffController
+    when /pass/
+      logger.info "Passing..."
+      pass HandOffController
+    when /play/
+      logger.info "Playing..."
+      play_audio_test
+    when /dial/
+      logger.info "Dialing..."
+      dial_outbound
+    when /originate/
+      logger.info "Originating..."
+      originate_call
+    when /menu/
+      logger.info "Menuing..."
+      hop_menu
+    else
+      force_call_failure
     end
-    logger.info "Completed main menu.  Exiting"
+    logger.info "Test call #{call.id} has completed normally"
   end
 
   def hop_menu
@@ -41,7 +49,7 @@ class LoadRunner < Adhearsion::CallController
   end
 
   def play_audio_test
-    play all_systems_go
+    play notification_audio
   end
 
   def dial_outbound

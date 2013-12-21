@@ -46,9 +46,11 @@ Content-Length: 0
 </send>
   <nop>
     <action>
-      <exec play_pcap_audio="loadtest_pass.pcap"/>
+      <exec play_pcap_audio="/vagrant/adhearsion-versus/sipp/loadtest_pass.pcap"/>
     </action>
   </nop>
+  <pause milliseconds="2000"/>
+  <pause milliseconds="500"/>
   <recv request="BYE"/>
   <send>
 <![CDATA[

@@ -4,7 +4,7 @@
 #
 source: 192.168.1.1
 destination: 192.168.1.1
-sip_user: usera # extension to dial
+sip_user: menu
 max_concurrent: 1
 calls_per_second: 1
 number_of_calls: 1
@@ -12,10 +12,6 @@ steps:
   - invite
   - wait_for_answer
   - ack_answer
-  - sleep 2 # Main Menu Prompt
-  - send_digits '6' # Call Hop Menu
   - sleep 2 # Hop Menu Prompt
   - send_digits '1' # Call Main Menu
-  - sleep 2 # Main Menu Prompt
-  - send_digits '7' # Exit Main Menu
   - wait_for_hangup
