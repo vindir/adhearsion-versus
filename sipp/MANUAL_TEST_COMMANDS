@@ -14,19 +14,15 @@ sudo sipp --trace_err --trace_screen -p 8837 -sf register_client.xml -inf regist
 sudo sipp --trace_err --trace_screen -p 8837 -sf loadtest_listener.xml -s userb -l 100 -m 1 -r 25 asterisk.local-dev.mojolingo.com
 
 Test Play:
-sudo sipp --trace_err --trace_screen -p 8836 -sf register_client.xml -inf register_usera.csv -s usera -m 1 -l 1 10.203.175.11
 sudo sipp --trace_err --trace_screen -p 8836 -sf loadtest_play.xml -s usera -l 100 -m 1 -r 25 asterisk.local-dev.mojolingo.com
 
 Test Menu:
-sudo sipp --trace_err --trace_screen -p 8836 -sf register_client.xml -inf register_usera.csv -s usera -m 1 -l 1 10.203.175.11
 sudo sipp --trace_err --trace_screen -p 8836 -sf loadtest_menu.xml -s usera -l 100 -m 1 -r 25 asterisk.local-dev.mojolingo.com
 
 Test Invoke:
-sudo sipp --trace_err --trace_screen -p 8836 -sf register_client.xml -inf register_usera.csv -s usera -m 1 -l 1 10.203.175.11
 sudo sipp --trace_err --trace_screen -p 8836 -sf loadtest_invoke.xml -s usera -l 100 -m 1 -r 25 asterisk.local-dev.mojolingo.com
 
 Test Pass:
-sudo sipp --trace_err --trace_screen -p 8836 -sf register_client.xml -inf register_usera.csv -s usera -m 1 -l 1 10.203.175.11
 sudo sipp --trace_err --trace_screen -p 8836 -sf loadtest_pass.xml -s usera -l 100 -m 1 -r 25 asterisk.local-dev.mojolingo.com
 
 Test Originate:
