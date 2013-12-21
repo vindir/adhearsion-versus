@@ -71,19 +71,19 @@ class LoadRunner < Adhearsion::CallController
   end
 
   def standard_greeting
-    "file:///vagrant/sounds/standard_greeting.wav"
+    "file:///vagrant/adhearsion-versus/audio/standard_greeting.wav"
   end
 
   def notification_audio
-    "file:///vagrant/sounds/notification_audio.wav"
+    "file:///vagrant/adhearsion-versus/audio/notification_audio.wav"
   end
 
   def all_systems_go
-    "file:///vagrant/sounds/audio_check.wav"
+    "file:///vagrant/adhearsion-versus/audio/audio_check.wav"
   end
 
   def hop_audio
-    "file:///vagrant/sounds/hop_audio.wav"
+    "file:///vagrant/adhearsion-versus/audio/hop_audio.wav"
   end
 
   def force_call_failure

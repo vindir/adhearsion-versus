@@ -33,6 +33,6 @@ class HandOffController < Adhearsion::CallController
   end
 
   def handoff_audio
-    "file:///vagrant/sounds/hop_audio.wav"
+    "file:///vagrant/adhearsion-versus/audio/hop_audio.wav"
   end
 end
